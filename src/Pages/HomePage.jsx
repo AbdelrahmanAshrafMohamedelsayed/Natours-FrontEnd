@@ -10,7 +10,8 @@ import {
 } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-import SkeltonCard from "../components/skeltonCard";
+import SkeltonCard from "./../components/SkeltonCard";
+
 import { useInfiniteQuery, useQuery } from "react-query";
 import { request } from "../Axios/axios";
 import { useToursDataFetch } from "../hooks/useToursData";
