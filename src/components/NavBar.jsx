@@ -114,7 +114,7 @@ const NavBar = () => {
                   className=" rounded-full w-[3.9rem] h-[3.9rem] object-cover mr-[1rem]"
                 />
               )}
-              <span className="">{name}</span>
+              <span className="max-sm:hidden">{name}</span>
             </div>
           )}
         </div>
