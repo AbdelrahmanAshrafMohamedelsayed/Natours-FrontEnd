@@ -50,12 +50,16 @@ export const useOneTourFetch = (tourId) => {
   });
 };
 
-const FetchBookingTours = () => {
-  return request({ url: `/bookings/getBookingToursOfUser` });
+const FetchBookingTours = (isUser) => {
+  if (isUser) {
+    return request({ url: `/bookings/getBookingToursOfUser` });
+  }
+  // return request({ url: `/bookings/getBookingToursOfUser` });
+  return;
 };
 
-export const useFetchBookingTours = (onSuccess, onError) => {
-  return useQuery(["BookingTours"], FetchBookingTours, {
+export const useFetchBookingTours = (onSuccess, onError, isUser = true) => {
+  return useQuery(["BookingTours"], () => FetchBookingTours(isUser), {
     onSuccess,
     onError,
     select: (data) => {

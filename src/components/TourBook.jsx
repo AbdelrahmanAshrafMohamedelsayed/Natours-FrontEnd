@@ -51,7 +51,7 @@ const TourBook = ({ tourId }) => {
     isError2,
     error2,
     data: userBookedTours,
-  } = useFetchBookingTours(onSuccess2, onError2);
+  } = useFetchBookingTours(onSuccess2, onError2, !!token);
   const isBooked = userBookedTours?.some((item) => item.id === tourId);
   // userBookedTours?.map((item) => console.log(item.id === tourId));
   // console.log({ isBooked });
