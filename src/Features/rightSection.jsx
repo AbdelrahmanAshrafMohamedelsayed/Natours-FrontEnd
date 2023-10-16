@@ -1,7 +1,7 @@
 import React from "react";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-const rightSection = ({ description, tourName }) => {
+const RightSection = ({ description, tourName }) => {
   return (
     <div className=" basis-[100%] px-[8vw] pt-[14vw] pb-[10vw] sm:basis-[50%] mb-[3rem]">
       <div>
@@ -28,4 +28,4 @@ const rightSection = ({ description, tourName }) => {
   );
 };
 
-export default rightSection;
+export default RightSection;
