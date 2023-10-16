@@ -159,7 +159,8 @@ const AccountUpdateForm = () => {
                 <button
                   type="submit"
                   to={``}
-                  className="  hover:shadow-lg  py-[1.4rem] px-[1.8rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] max-md:text-[1.4rem] font-[400] uppercase border-none outline-none max-md:py-[1.2rem] max-md:px-[1.6rem]"
+                  className="disabled:opacity-50 disabled:cursor-not-allowed  hover:shadow-lg  py-[1.4rem] px-[1.8rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] max-md:text-[1.4rem] font-[400] uppercase border-none outline-none max-md:py-[1.2rem] max-md:px-[1.6rem]"
+                  disabled={isLoading}
                 >
                   {!isLoading && "Save settings"}
                   {isLoading && "Saving..."}

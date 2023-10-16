@@ -161,9 +161,10 @@ const SignUp = () => {
                 <button
                   type="submit"
                   to={``}
-                  className="  hover:shadow-lg  py-[1.4rem] px-[3rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] font-[400] uppercase border-none outline-none"
+                  className="disabled:opacity-50 disabled:cursor-not-allowed  hover:shadow-lg  py-[1.4rem] px-[3rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] font-[400] uppercase border-none outline-none"
+                  disabled={isLoading}
                 >
-                  sign up
+                  {isLoading ? "Sending..." : "Sign up"}
                 </button>
               </div>
             </Form>

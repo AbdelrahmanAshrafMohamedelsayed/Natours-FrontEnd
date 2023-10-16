@@ -104,7 +104,8 @@ const Login = () => {
                   <div className="transform hover:translate-y-[-4px]  duration-[.5s] mt-[1rem]">
                     <button
                       type="submit"
-                      className="  hover:shadow-lg  py-[1.4rem] px-[3rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] font-[400] uppercase border-none outline-none"
+                      className="disabled:opacity-50 disabled:cursor-not-allowed  hover:shadow-lg  py-[1.4rem] px-[3rem] bg-[#55c57a] text-[#f7f7f7] rounded-[10rem] text-[1.6rem] font-[400] uppercase border-none outline-none"
+                      disabled={isLoading}
                     >
                       {isLoading ? "logging in...." : "Login"}
                     </button>
